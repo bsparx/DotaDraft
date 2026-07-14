@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model HeroMatchup {
+  id        Int      @id @default(1)
+  data      String   @db.Text
+  updatedAt DateTime @updatedAt
+}
